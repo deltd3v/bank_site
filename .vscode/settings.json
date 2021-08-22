@@ -1,0 +1,5 @@
+{
+	"editor.formatOnSave": true,
+	"files.autoSave": "afterDelay",
+	"prettier.configPath": "/home/evans-wsl/.code/.prettierrc"
+}
