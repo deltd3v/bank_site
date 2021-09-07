@@ -1,7 +1,7 @@
 import { Component } from "solid-js"
 
-const component: Component = () => {
-    const jsx = (<h1>Hello World</h1>)
+const component: Component<{ msg: string }> = (props ) => {
+    const jsx = (<h1>{props.msg}</h1>)
     return jsx
 }
 
