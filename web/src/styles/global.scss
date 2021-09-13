@@ -1,55 +1,117 @@
+@use 'em';
+@use 'typography';
+@import 'modern-normalize';
+@import '@fontsource/exo';
+@import '@fontsource/lato';
+@import '@fontsource/merriweather';
+@import '@fontsource/source-code-pro';
 
-/*@import '../../node_modules/modern-normalize/modern-normalize.css';
+/* reset */
 
-@import "../../node_modules/@fontsource/merriweather/";
-@import "../../node_modules/@fontsource/lato";
-@import "../../node_modules/@fontsource/source-code-pro";
-
-*/
-
-@import "modern-normalize";
-@import "@fontsource/lato";
-@import "@fontsource/merriweather";
-@import "@fontsource/source-code-pro";
-/* custom reset */
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html,body {
-  width: 100vw;
-  height: 100vh;
+html,
+body {
+	width: 100vw;
+	height: 100vh;
 
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
 }
 
 a {
-  color:inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
+button {
+	outline: none;
+}
 
+button:hover {
+	cursor: pointer;
+}
 /* Fonts */
-h1,h2,h3,h4,h5,h6, .ff-head { font-family: "Merriweather", -apple-system, BlinkMacSystemFont, serif; }
-
-html, body, .ff-body {
-  font-family: "Lato",sans-serif; 
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ff-head {
+	font-family: 'Merriweather', -apple-system, BlinkMacSystemFont, serif;
 }
 
-code { font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New",
-    monospace; }
+html,
+body,
+.ff-body {
+	font-family: 'Lato', sans-serif;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
 
+button,
+input[type='submit'],
+a,
+.link {
+	font-family: 'Exo';
+}
+
+code {
+	font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* Theme variables */
 :root {
-  --accent: rgb(233,188,8); 
+	--root-fs: em(16px);
+	--accent: rgb(24, 110, 196);
+	--accent-light: rgb(79, 167, 255);
+
+	--font-md: 1em;
+	--font-big: 1.25em;
+	--padding-lg: 0.75em 4em;
+	--padding-md: 0.625em 1.25em;
+}
+
+html,
+body {
+	font-size: var(--root-fs);
+}
+
+/* Theme preset */
+
+*,
+*:focus,
+*::before,
+*::after {
+	outline-color: var(--accent);
+}
+
+/* Util classes */
+.no-txt-hl {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.icon {
+	//stroke: red;
+	stroke-width: 0.2em;
+	width: 1.1em;
+	height: 1.1em;
+	margin: 0em 0.5em;
 }
