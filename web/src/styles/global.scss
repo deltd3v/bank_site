@@ -18,11 +18,14 @@
 
 html,
 body {
-	width: 100vw;
 	height: 100vh;
 
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
 }
 
 a {

@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 
 const NavBar: Component = () => {
 	const [menuToggle, setMenuToggle] = createSignal(false);
-	const [button, setButton] = createSignal(true);
+	const [button, setButton] = createSignal(false);
 
 	const handleMenuToggle = () => setMenuToggle(!menuToggle());
 
@@ -54,7 +54,7 @@ const NavBar: Component = () => {
 
 					<div
 						class={`${styles['MobileIcon']} ${
-							styles[menuToggle() ? 'close' : 'open']
+							styles[!menuToggle() ? 'close' : 'open']
 						}`}
 						onClick={handleMenuToggle}>
 						<i
@@ -65,30 +65,42 @@ const NavBar: Component = () => {
 						<i
 							class={styles['menu-close']}
 							style={`color: white;`}
-							data-feather="x-square"></i>
+							data-feather="x"></i>
 					</div>
 
 					<ul
 						onClick={handleMenuToggle}
 						class={`${styles['NavMenu']} 
-						${styles[`${menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
+						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
 						<li class={styles['NavItem']}>
-							<NavLink href="/" class={styles['NavLink']}>
+							<NavLink
+								tabIndex={1}
+								href="/"
+								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Home</b>
 							</NavLink>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink href="/about" class={styles['NavLink']}>
+							<NavLink
+								tabIndex={2}
+								href="/about"
+								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>About</b>
 							</NavLink>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink href="/products" class={styles['NavLink']}>
+							<NavLink
+								tabIndex={3}
+								href="/products"
+								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Products</b>
 							</NavLink>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink href="/services" class={styles['NavLink']}>
+							<NavLink
+								tabIndex={4}
+								href="/services"
+								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Services</b>
 							</NavLink>
 						</li>
@@ -99,6 +111,7 @@ const NavBar: Component = () => {
 									href="/sign-up"
 									class={`${styles['NavBtnLink']}`}>
 									<button
+										tabIndex={5}
 										class={`${styles['Button']} ${styles['padBig']} ${styles['bgPrimary']}`}>
 										<b>Sign Up</b>
 									</button>
@@ -108,6 +121,7 @@ const NavBar: Component = () => {
 									href="/sign-up"
 									class={`${styles['NavBtnLink']}`}>
 									<button
+										tabIndex={5}
 										class={`${styles['Button']} ${styles['bgPrimary']}  ${styles['padBig']} ${styles['fontBig']}`}
 										onClick={closeMobileMenu}>
 										<b>Sign Up</b>
