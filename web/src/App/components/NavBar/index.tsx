@@ -1,4 +1,4 @@
-import { NavLink } from 'solid-app-router';
+import { Link } from 'solid-app-router';
 import {
 	Component,
 	createEffect,
@@ -38,8 +38,9 @@ const NavBar: Component = () => {
 		<>
 			<nav class={styles['Nav']}>
 				<div class={styles['NavbarContainer']}>
-					<NavLink
-						href="/"
+					<a
+						tabIndex={1}
+						href="#index"
 						class={styles['NavLogoLink']}
 						onClick={closeMobileMenu}>
 						star
@@ -50,7 +51,7 @@ const NavBar: Component = () => {
 							class={'NavLogoIcon'}
 							strokeWidth={75}></Logo>
 						bank
-					</NavLink>
+					</a>
 
 					<div
 						class={`${styles['MobileIcon']} ${
@@ -73,60 +74,57 @@ const NavBar: Component = () => {
 						class={`${styles['NavMenu']} 
 						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
 						<li class={styles['NavItem']}>
-							<NavLink
-								tabIndex={1}
-								href="/"
-								class={styles['NavLink']}>
+							<a tabIndex={2} href="/" class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Home</b>
-							</NavLink>
+							</a>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink
-								tabIndex={2}
-								href="/about"
+							<a
+								tabIndex={3}
+								href="#about"
 								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>About</b>
-							</NavLink>
+							</a>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink
-								tabIndex={3}
-								href="/products"
+							<a
+								tabIndex={4}
+								href="#products"
 								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Products</b>
-							</NavLink>
+							</a>
 						</li>
 						<li class={styles['NavItem']}>
-							<NavLink
-								tabIndex={4}
-								href="/services"
+							<a
+								tabIndex={5}
+								href="#services"
 								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Services</b>
-							</NavLink>
+							</a>
 						</li>
 
 						<li class={styles['NavItemBtn']}>
 							{button ? (
-								<NavLink
-									href="/sign-up"
+								<a
+									href="#sign-up"
 									class={`${styles['NavBtnLink']}`}>
 									<button
-										tabIndex={5}
+										tabIndex={6}
 										class={`${styles['Button']} ${styles['padBig']} ${styles['bgPrimary']}`}>
 										<b>Sign Up</b>
 									</button>
-								</NavLink>
+								</a>
 							) : (
-								<NavLink
-									href="/sign-up"
+								<a
+									href="#sign-up"
 									class={`${styles['NavBtnLink']}`}>
 									<button
-										tabIndex={5}
+										tabIndex={6}
 										class={`${styles['Button']} ${styles['bgPrimary']}  ${styles['padBig']} ${styles['fontBig']}`}
 										onClick={closeMobileMenu}>
 										<b>Sign Up</b>
 									</button>
-								</NavLink>
+								</a>
 							)}
 						</li>
 					</ul>

@@ -1,7 +1,11 @@
 import { Component } from 'solid-js';
 
-export const products: Component = () => {
-	return <h1>Products</h1>;
+export const Products: Component = () => {
+	return (
+		<div id="products" class="page">
+			<h1>Products</h1>
+		</div>
+	);
 };
 
-export default products;
+export default Products;

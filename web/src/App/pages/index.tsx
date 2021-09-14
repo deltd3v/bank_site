@@ -1,7 +1,11 @@
 import { Component } from 'solid-js';
 
-const index: Component = () => {
-	return <h1>index</h1>;
+const Index: Component = () => {
+	return (
+		<div id="index" class="page">
+			<h1>index</h1>
+		</div>
+	);
 };
 
-export default index;
+export default Index;

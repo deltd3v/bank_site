@@ -26,6 +26,7 @@ body {
 
 body {
 	width: 100%;
+	position: relative;
 }
 
 a {
@@ -117,4 +118,11 @@ body {
 	width: 1.1em;
 	height: 1.1em;
 	margin: 0em 0.5em;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
 }
