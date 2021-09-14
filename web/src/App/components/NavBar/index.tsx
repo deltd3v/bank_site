@@ -59,12 +59,12 @@ const NavBar: Component = () => {
 						onClick={handleMenuToggle}>
 						<i
 							class={styles['menu-open']}
-							style={`color: white;`}
+							style={`color: white;stroke-width:.12em`}
 							data-feather="menu"></i>
 
 						<i
 							class={styles['menu-close']}
-							style={`color: white;`}
+							style={`color: white;stroke-width:.12em`}
 							data-feather="x"></i>
 					</div>
 
@@ -72,6 +72,7 @@ const NavBar: Component = () => {
 						onClick={handleMenuToggle}
 						class={`${styles['NavMenu']} 
 						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
+						
 						<li class={styles['NavItem']}>
 							<NavLink
 								tabIndex={1}
