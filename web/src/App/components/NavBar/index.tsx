@@ -72,7 +72,6 @@ const NavBar: Component = () => {
 						onClick={handleMenuToggle}
 						class={`${styles['NavMenu']} 
 						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
-						
 						<li class={styles['NavItem']}>
 							<NavLink
 								tabIndex={1}
