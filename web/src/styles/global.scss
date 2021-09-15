@@ -113,7 +113,6 @@ body {
 }
 
 .icon {
-	//stroke: red;
 	stroke-width: 0.2em;
 	width: 1.1em;
 	height: 1.1em;
@@ -131,29 +130,27 @@ body {
 
 /* The root is a relative anchor for a sticky menu that is revealed ONLY when scrolling up. */
 #root {
-	width: 100%;
-	min-width: 100%;
-	height: calc(100vh * 5); // for 5pages
 	top: 0;
 	left: 0;
+	width: 100%;
+	min-width: 100%;
 	position: relative;
+	height: calc(100vh * 5); // for 5pages
 }
 
 .scroll-down #nav {
+	transform: translate3d(0, -100%, 0);
+	transition: 0.4s all ease-in-out;
 	div#NavbarContainer #NavMenu {
 		display: none;
 	}
-	transform: translate3d(0, -100%, 0);
-	transition: 0.4s all ease-in-out;
 }
 
 .scroll-up #nav {
-	display: block;
-	//div#NavbarContainer #NavMenu {display:none}
-
-	transition: 0.4s all ease-in-out;
-	position: sticky;
 	top: 0;
 	left: 0;
+	display: block;
+	position: sticky;
+	transition: 0.4s all ease-in-out;
 	filter: drop-shadow(-5px 10px 20px lightgray);
 }

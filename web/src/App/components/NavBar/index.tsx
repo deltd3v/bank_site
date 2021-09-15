@@ -33,8 +33,12 @@ const NavBar: Component = () => {
 		showButton();
 	});
 
+	window.addEventListener('scroll', () => {
+		setMenuToggle(true);
+		setButton(true);
+	});
+
 	window.addEventListener('resize', showButton);
-	//	window.addEventListener('scroll', showButton);
 	return (
 		<nav id="nav" class={styles['Nav']}>
 			<div id="NavbarContainer" class={styles['NavbarContainer']}>
