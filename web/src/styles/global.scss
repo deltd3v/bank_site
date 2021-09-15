@@ -140,13 +140,17 @@ body {
 }
 
 .scroll-down #nav {
-	opacity: 0.5;
-	transition: 0.4s all ease-in-out;
+	div#NavbarContainer #NavMenu {
+		display: none;
+	}
 	transform: translate3d(0, -100%, 0);
+	transition: 0.4s all ease-in-out;
 }
 
 .scroll-up #nav {
-	opacity: 1;
+	display: block;
+	//div#NavbarContainer #NavMenu {display:none}
+
 	transition: 0.4s all ease-in-out;
 	position: sticky;
 	top: 0;

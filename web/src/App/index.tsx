@@ -22,7 +22,7 @@ const App: Component = () => {
 		<>
 			<NavBar></NavBar>
 
-			<div style="width:1300px;height:100vh;">
+			<div style="height:100vh;">
 				<Index></Index>
 				<About></About>
 				<Products></Products>
