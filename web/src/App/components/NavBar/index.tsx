@@ -34,8 +34,9 @@ const NavBar: Component = () => {
 	});
 
 	window.addEventListener('scroll', () => {
-		setMenuToggle(true);
-		setButton(true);
+		document.body.classList.contains('scroll-up') &&
+			setMenuToggle(true) &&
+			setButton(true);
 	});
 
 	window.addEventListener('resize', showButton);

@@ -186,10 +186,10 @@
 	outline: none;
 	color: #fff;
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 2em;
 	white-space: nowrap;
 	background: var(--accent-light);
-
+	padding: 0.5em 1em;
 	&:hover,
 	&:focus {
 		background: #fff;
@@ -198,7 +198,7 @@
 	}
 
 	@media screen and (max-width: 960px) {
-		width: 60%;
+		// width: 60%;
 	}
 }
 
@@ -223,9 +223,9 @@
 }
 
 .padBig {
-	padding: 12px 64px;
+	padding: 0.5em 8em;
 }
 
 .padSmall {
-	padding: 10px 20px;
+	padding: 0.5em 4em;
 }
