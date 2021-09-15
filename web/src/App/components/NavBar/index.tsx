@@ -74,7 +74,10 @@ const NavBar: Component = () => {
 						class={`${styles['NavMenu']} 
 						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
 						<li class={styles['NavItem']}>
-							<a tabIndex={2} href="/" class={styles['NavLink']}>
+							<a
+								tabIndex={2}
+								href="#index"
+								class={styles['NavLink']}>
 								<b onClick={closeMobileMenu}>Home</b>
 							</a>
 						</li>

@@ -141,13 +141,13 @@ body {
 
 .scroll-down #nav {
 	opacity: 0.5;
-	transition: 0.7s all ease-in-out;
+	transition: 0.4s all ease-in-out;
 	transform: translate3d(0, -100%, 0);
 }
 
 .scroll-up #nav {
 	opacity: 1;
-	transition: 0.7s all ease-in-out;
+	transition: 0.4s all ease-in-out;
 	position: sticky;
 	top: 0;
 	left: 0;
