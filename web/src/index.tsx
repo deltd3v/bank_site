@@ -33,6 +33,9 @@ window.addEventListener('scroll', (e) => {
 		root.classList.add('scroll-up');
 	}
 
+	if (crntScroll == 60)
+		root.classList.contains('scroll-up') && window.scrollTo({ top: 0 });
+
 	prevScroll = crntScroll;
 });
 

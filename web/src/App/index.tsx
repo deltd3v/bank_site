@@ -22,7 +22,7 @@ const App: Component = () => {
 		<>
 			<NavBar></NavBar>
 
-			<div style="height:100vh;">
+			<div class={styles['pageContainer']} style="height:100vh;">
 				<Index></Index>
 				<About></About>
 				<Products></Products>
