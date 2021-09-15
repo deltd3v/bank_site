@@ -1,10 +1,9 @@
-import { createSignal, lazy, onMount } from 'solid-js';
+import { onMount } from 'solid-js';
 import type { Component } from 'solid-js';
 import { Routes, Route } from 'solid-app-router';
 
 import styles from './styles.module.scss';
 import NavBar from './components/NavBar';
-// import logo from '../assets/logo/logo.svg';
 
 import feather from 'feather-icons';
 import Index from './pages';
@@ -14,20 +13,15 @@ import Services from './pages/services';
 import SignUp from './pages/sign-up';
 import { style } from 'solid-js/web';
 
-// const Index = lazy(() => import('../App/pages/index'));
-// const About = lazy(() => import('../App/pages/about'));
-// const Products = lazy(() => import('../App/pages/products'));
-// const SignUp = lazy(() => import('../App/pages/sign-up'));
-// const Services = lazy(() => import('../App/pages/services'));
-
 const App: Component = () => {
 	onMount(() => {
 		feather.replace();
 	});
 
 	return (
-		<div class={styles.App}>
-			<NavBar />
+		<>
+			<NavBar></NavBar>
+
 			<div style="width:100vw;height:100vh;">
 				<Index></Index>
 				<About></About>
@@ -43,7 +37,7 @@ const App: Component = () => {
 				<Route path="/services" element={<Services />} />
 				<Route path="/sign-up" element={<SignUp />} />
 			</Routes> */}
-		</div>
+		</>
 	);
 };
 

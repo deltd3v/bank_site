@@ -122,7 +122,29 @@ body {
 
 .page {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	margin: 0 auto;
+	padding-top: 60px;
 	max-width: 1300px;
+	position: relative;
+}
+
+/* The root is a relative anchor for a sticky menu that is revealed ONLY when scrolling up. */
+#root {
+	width: 100%;
+	min-width: 100vw;
+	height: calc(100vh * 5); // for 5pages
+	top: 0;
+	left: 0;
+	position: relative;
+}
+
+.scroll-down #nav {
+	transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up #nav {
+	position: sticky;
+	top: 0;
+	left: 0;
 }

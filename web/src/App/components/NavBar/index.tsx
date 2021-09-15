@@ -36,7 +36,7 @@ const NavBar: Component = () => {
 
 	return (
 		<>
-			<nav class={styles['Nav']}>
+			<nav id="nav" class={styles['Nav']}>
 				<div class={styles['NavbarContainer']}>
 					<a
 						tabIndex={1}
