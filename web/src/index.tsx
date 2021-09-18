@@ -38,5 +38,6 @@ window.addEventListener('scroll', (e) => {
 
 	prevScroll = crntScroll;
 });
+console.clear();
 
 render(() => <App />, root);

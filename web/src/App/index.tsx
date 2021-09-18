@@ -2,7 +2,7 @@ import { onMount } from 'solid-js';
 import type { Component } from 'solid-js';
 import { Routes, Route } from 'solid-app-router';
 
-import styles from './styles.module.scss';
+import s from './styles.module.scss';
 import NavBar from './components/NavBar';
 
 import feather from 'feather-icons';
@@ -22,7 +22,7 @@ const App: Component = () => {
 		<>
 			<NavBar></NavBar>
 
-			<div class={styles['pageContainer']} style="height:100vh;">
+			<div class={s['pageContainer']} style="height:100vh;">
 				<Index></Index>
 				<About></About>
 				<Products></Products>

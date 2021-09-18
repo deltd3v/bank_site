@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import styles from './styles.module.scss';
+import s from './styles.module.scss';
 export const Logo: Component<{
 	class?: string | any;
 	width?: number;
@@ -9,7 +9,7 @@ export const Logo: Component<{
 }> = (props) => {
 	return (
 		<svg
-			class={styles[props.class]}
+			class={s[props.class]}
 			width={props.width || 910}
 			height={props.height || 867}
 			viewBox="0 0 910 867"

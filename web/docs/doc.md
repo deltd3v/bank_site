@@ -6,7 +6,7 @@ accent-color
 rgb(233,188,8)
 
 bg video
-https://www.pexels.com/video/running-a-light-of-digital-information-3129977/
+https://www.pexels.com/video/digital-map-of-latitude-and-longitude-3141207/
 
 Install fonts from the following source
 Heading-font: Merriweather

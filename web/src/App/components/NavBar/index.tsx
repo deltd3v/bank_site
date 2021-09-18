@@ -10,7 +10,7 @@ import {
 } from 'solid-js';
 
 import Logo from '../Logo';
-import styles from './styles.module.scss';
+import s from './styles.module.scss';
 
 const NavBar: Component = () => {
 	const [menuToggle, setMenuToggle] = createSignal(false);
@@ -21,17 +21,29 @@ const NavBar: Component = () => {
 	const closeMobileMenu = () => setMenuToggle(false);
 
 	const showButton = () => {
-		if (window.innerWidth >= 960) {
-			setButton(true);
+		setButton();
+		setMenuToggle();
+		//	setButton(true);
+		/*if (window.innerWidth >= 960) {
+			setMenuToggle(true);
 		} else {
-			setMenuToggle(false);
 			setButton(true);
-		}
+			setMenuToggle(false);
+		}*/
 	};
 
 	createEffect(() => {
 		showButton();
 	});
+
+	window.addEventListener('load', (_) => {
+		handleMenuToggle();
+	});
+
+	window.addEventListener(
+		'keydown',
+		(e) => e.key == 'Escape' && closeMobileMenu()
+	);
 
 	window.addEventListener('scroll', () => {
 		setMenuToggle(true);
@@ -40,12 +52,12 @@ const NavBar: Component = () => {
 
 	window.addEventListener('resize', showButton);
 	return (
-		<nav id="nav" class={styles['Nav']}>
-			<div id="NavbarContainer" class={styles['NavbarContainer']}>
+		<nav id="nav" class={s['Nav']}>
+			<div id="NavbarContainer" class={s['NavbarContainer']}>
 				<a
 					tabIndex={1}
 					href="#index"
-					class={styles['NavLogoLink']}
+					class={s['NavLogoLink']}
 					onClick={closeMobileMenu}>
 					star
 					<Logo
@@ -58,17 +70,18 @@ const NavBar: Component = () => {
 				</a>
 
 				<div
-					class={`${styles['MobileIcon']} ${
-						styles[!menuToggle() ? 'close' : 'open']
+					tabIndex={2}
+					class={`${s['MobileIcon']} ${
+						s[!menuToggle() ? 'close' : 'open']
 					}`}
 					onClick={handleMenuToggle}>
 					<i
-						class={styles['menu-open']}
+						class={s['menu-open']}
 						style={`color: white;stroke-width:.12em`}
 						data-feather="menu"></i>
 
 					<i
-						class={styles['menu-close']}
+						class={s['menu-close']}
 						style={`color: white;stroke-width:.12em`}
 						data-feather="x"></i>
 				</div>
@@ -76,53 +89,44 @@ const NavBar: Component = () => {
 				<ul
 					onClick={handleMenuToggle}
 					id="NavMenu"
-					class={`${styles['NavMenu']} 
-						${styles[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
-					<li class={styles['NavItem']}>
-						<a tabIndex={2} href="#index" class={styles['NavLink']}>
+					class={`${s['NavMenu']} 
+						${s[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
+					<li class={s['NavItem']}>
+						<a tabIndex={3} href="#index" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Home</b>
 						</a>
 					</li>
-					<li class={styles['NavItem']}>
-						<a tabIndex={3} href="#about" class={styles['NavLink']}>
+					<li class={s['NavItem']}>
+						<a tabIndex={4} href="#about" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>About</b>
 						</a>
 					</li>
-					<li class={styles['NavItem']}>
-						<a
-							tabIndex={4}
-							href="#products"
-							class={styles['NavLink']}>
+					<li class={s['NavItem']}>
+						<a tabIndex={5} href="#products" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Products</b>
 						</a>
 					</li>
-					<li class={styles['NavItem']}>
-						<a
-							tabIndex={5}
-							href="#services"
-							class={styles['NavLink']}>
+					<li class={s['NavItem']}>
+						<a tabIndex={6} href="#services" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Services</b>
 						</a>
 					</li>
 
-					<li class={styles['NavItemBtn']}>
+					<li class={s['NavItemBtn']}>
 						{button ? (
-							<a
-								href="#sign-up"
-								class={`${styles['NavBtnLink']}`}>
+							<a href="#sign-up" class={`${s['NavBtnLink']}`}>
 								<button
-									tabIndex={6}
-									class={`${styles['Button']} ${styles['padBig']} ${styles['bgPrimary']}`}>
+									tabIndex={7}
+									class={`${s['Button']} ${s['padBig']} ${s['bgPrimary']}`}>
 									<b>Sign Up</b>
+									<i data-feather="user-plus"></i>
 								</button>
 							</a>
 						) : (
-							<a
-								href="#sign-up"
-								class={`${styles['NavBtnLink']}`}>
+							<a href="#sign-up" class={`${s['NavBtnLink']}`}>
 								<button
-									tabIndex={6}
-									class={`${styles['Button']} ${styles['bgPrimary']}  ${styles['padBig']} ${styles['fontBig']}`}
+									tabIndex={8}
+									class={`${s['Button']} ${s['bgPrimary']}  ${s['padBig']} ${s['fontBig']}`}
 									onClick={closeMobileMenu}>
 									<b>Sign Up</b>
 								</button>

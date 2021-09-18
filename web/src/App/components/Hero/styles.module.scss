@@ -1,0 +1,148 @@
+@use 'sass:math';
+.container {
+	background: #0c0c0c;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	width: 100%;
+	height: 100%;
+
+	z-index: 1;
+	position: relative;
+	// &::before{}
+
+	padding: math.div(100vh, 2.8) 0;
+}
+
+.heroBg {
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.videoBg {
+	width: 100%;
+	height: 100%;
+
+	background: #232a34;
+
+	object-fit: cover;
+	-o-object-fit: cover;
+}
+
+.heroContent {
+	z-index: 3;
+	max-width: 1200px;
+	position: absolute;
+	align-items: center;
+	flex-direction: column;
+}
+
+.heroTitle {
+	color: white;
+	font-size: 68px;
+	text-align: center;
+
+	@media screen and (max-width: 480px) {
+		font-size: 36px;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 48px;
+	}
+}
+
+.heroMotto {
+	color: white;
+	text-align: center;
+	margin-top: 24px;
+	max-width: 600px;
+
+	@media screen and (max-width: 480px) {
+		font-size: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 28px;
+	}
+}
+
+.heroCtaBtnContainer {
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 180px 0px;
+}
+
+.heroCtaBtn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 2em;
+	padding: 0.5em 2em;
+	background-color: var(--accent-light);
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--accent);
+	}
+
+	> * {
+		stroke: white;
+		stroke-width: 2;
+	}
+
+	&:first-child {
+		margin: 0 0.4em;
+	}
+}
+
+.heroCtaBtnIcon {
+	margin-left: 8px;
+	font-size: 20px;
+}
+
+.heroCtaBtnIconA {
+	color: black;
+}
+
+.heroCtaBtnIconB {
+	color: black;
+}
+
+.heroCtaBtnIcon {
+	display: none;
+}
+
+.iconRight > .heroCtaBtnIconA {
+	display: block;
+}
+
+.iconRight > .heroCtaBtnIconB {
+	display: none;
+}
+
+.iconChevRight > .heroCtaBtnIconA {
+	display: none;
+}
+
+.iconChevRight > .heroCtaBtnIconB {
+	display: block;
+}
