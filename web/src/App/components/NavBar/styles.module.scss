@@ -198,13 +198,17 @@
 	cursor: pointer;
 	border-radius: 2em;
 	white-space: nowrap;
-	padding: 0.5em 1em;
+	padding: 0.5em 0.8em;
 	background: var(--accent-light);
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+
+	&:first-child {
+		margin: 0 0.4em;
+	}
 
 	&:hover,
 	&:focus {
@@ -239,9 +243,9 @@
 }
 
 .padBig {
-	padding: 0.5em 4em;
+	padding: 0.5em 2em;
 }
 
 .padSmall {
-	padding: 0.5em 2em;
+	padding: 0.25em 1em;
 }

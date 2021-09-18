@@ -1,6 +1,6 @@
 @use 'sass:math';
 .container {
-	background: #0c0c0c;
+	background: #000000c1;
 
 	display: flex;
 	align-items: center;
@@ -97,6 +97,7 @@
 	color: white;
 	border-radius: 2em;
 	padding: 0.5em 2em;
+
 	background-color: var(--accent-light);
 
 	&:hover {
