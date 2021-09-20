@@ -7,11 +7,8 @@ import NavBar from './components/NavBar';
 
 import feather from 'feather-icons';
 import Index from './pages';
-import About from './pages/about';
-import Products from './pages/products';
-import Services from './pages/services';
-import SignUp from './pages/sign-up';
-import { style } from 'solid-js/web';
+
+import PromoInfo from './components/Promo';
 
 const App: Component = () => {
 	onMount(() => {
@@ -24,19 +21,7 @@ const App: Component = () => {
 
 			<div class={s['pageContainer']} style="height:100vh;">
 				<Index></Index>
-				<About></About>
-				<Products></Products>
-				<Services></Services>
-				<SignUp></SignUp>
 			</div>
-
-			{/* <Routes>
-				<Route path="/" element={<Index />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/products" element={<Products />} />
-				<Route path="/services" element={<Services />} />
-				<Route path="/sign-up" element={<SignUp />} />
-			</Routes> */}
 		</>
 	);
 };

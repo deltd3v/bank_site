@@ -30,6 +30,7 @@ export const Hero: Component = () => {
 					onMouseEnter={toggleCtaHover}
 					onMouseLeave={toggleCtaHover}>
 					<button
+						tabIndex={8}
 						class={`${s.heroCtaBtn} ${
 							heroCtaHover()
 								? `${s.iconChevRight}`

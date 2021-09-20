@@ -1,0 +1,163 @@
+@use '../../../styles/btn';
+
+.container {
+	color: white;
+	width: 100%;
+	height: 100%;
+}
+
+.themeLight {
+	background: #f9f9f9;
+}
+
+.themeDark {
+	background: #010606;
+}
+
+.wrapper {
+	display: grid;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 24px;
+	justify-content: center;
+}
+
+.promoRow {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	align-items: center;
+
+	grid-auto-columns: minmax(auto, 1fr);
+}
+
+.gtaImgStart {
+	grid-template-areas: 'img promo';
+
+	@media screen and (max-width: 768px) {
+		grid-template-areas: 'img promo';
+	}
+}
+
+.gtaImgEnd {
+	grid-template-areas: 'promo img';
+
+	@media screen and (max-width: 768px) {
+		grid-template-areas: 'promo promo' 'img img';
+	}
+}
+
+.column1 {
+	margin-bottom: 15px;
+	padding: 15px;
+	grid-area: promo;
+}
+
+.column2 {
+	margin-bottom: 15px;
+	padding: 15px;
+	grid-area: img;
+}
+
+.textWrapper {
+	max-width: 548px;
+	padding-top: 0;
+	padding-bottom: 60px;
+}
+
+.byLine {
+	color: #01bf71;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.title {
+	font-weight: bolder;
+	margin-bottom: 15px;
+	font-size: 46px;
+	line-height: 1.1;
+	font-weight: 600;
+	@media screen and (max-width: 480px) {
+		font-size: 30px;
+	}
+}
+
+.titleLight,
+.subTitleLight,
+.promoDescLight {
+	color: #f7f8fa;
+}
+
+.titleDark,
+.subTitleDark,
+.promoDescDark {
+	color: #010606;
+}
+
+.subTitle {
+	max-width: 448px;
+	color: rgb(146, 146, 146);
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.promoDesc {
+	max-width: 448px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.btnWrapper {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.imgWrap {
+	max-width: 555px;
+	height: 100%;
+}
+
+.img {
+	width: 80%;
+	padding-right: 0;
+	margin: 0 0 10px 0;
+}
+
+.btn {
+	border-radius: 5em;
+
+	&-small {
+		padding: 0.25em 2em;
+	}
+
+	&-big {
+		padding: 0.5em 4em;
+	}
+
+	&-dark {
+		background: black;
+
+		color: white;
+	}
+
+	&-light {
+		background: white;
+
+		color: black;
+	}
+
+	&:hover,
+	&:focus {
+		background: var(--accent-light);
+	}
+}

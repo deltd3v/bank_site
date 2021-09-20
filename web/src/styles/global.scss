@@ -1,4 +1,5 @@
 @use 'em';
+@use 'btn';
 @use 'typography';
 @import 'modern-normalize';
 @import '@fontsource/exo';
@@ -13,13 +14,14 @@
 *::after {
 	margin: 0;
 	padding: 0;
+
+	transition: all 0.2s ease-in-out;
 	box-sizing: border-box;
 }
 
 html,
 body {
 	height: 100vh;
-
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
 }
@@ -141,13 +143,9 @@ body {
 }
 
 .scroll-down #nav {
-	transition: 1s all ease-in-out;
 	transform: translate3d(0, -100%, 0);
 
-	div#NavbarContainer #NavMenu {
-		transition: 0.5s all ease-in-out;
-		display: none;
-	}
+	// div#NavbarContainer #NavMenu {}
 }
 
 .scroll-up #nav {
@@ -155,5 +153,4 @@ body {
 	left: 0;
 	display: block;
 	position: sticky;
-	transition: 0.5s all ease-in-out;
 }

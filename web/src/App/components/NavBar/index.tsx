@@ -101,7 +101,7 @@ const NavBar: Component = () => {
 							<b onClick={closeMobileMenu}>About</b>
 						</a>
 					</li>
-					<li class={s['NavItem']}>
+					{/* <li class={s['NavItem']}>
 						<a tabIndex={5} href="#products" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Products</b>
 						</a>
@@ -110,7 +110,7 @@ const NavBar: Component = () => {
 						<a tabIndex={6} href="#services" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Services</b>
 						</a>
-					</li>
+					</li> */}
 
 					<li class={s['NavItemBtn']}>
 						{button ? (

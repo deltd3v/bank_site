@@ -1,0 +1,134 @@
+%btn-colDark {
+	color: black;
+	stroke: black;
+
+	> * {
+		color: black;
+		stroke: black;
+	}
+}
+
+%btn-colLight {
+	color: white;
+	stroke: white;
+
+	> * {
+		color: white;
+		stroke: white;
+	}
+}
+
+%btn-padSmall {
+	padding: 8px 20px;
+}
+
+%btn-padBig {
+	padding: 10px 25px;
+}
+
+%btn-bg-accent {
+	background: var(--accent);
+}
+
+%btn-bg-accent-light {
+	background: var(--accent-light);
+}
+
+%btn-fontSmall {
+	font-size: 16px;
+}
+
+%btn-fontBig {
+	font-size: 20px;
+}
+
+%btn-common {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	> * {
+		stroke-width: 2;
+	}
+
+	&:first-child {
+		margin: 0 0.4em;
+	}
+
+	&:hover {
+		> * {
+			stroke-width: 3;
+		}
+	}
+}
+
+// btn variants
+%btnDarkBig {
+	border-radius: 40px;
+	white-space: nowrap;
+	outline: none;
+	border: none;
+	@extend %btn-fontBig;
+	@extend %btn-padBig;
+	@extend %btn-common;
+	@extend %btn-colDark;
+	@extend %btn-bg-accent-light;
+
+	&:hover {
+		cursor: pointer;
+		@extend %btn-bg-accent;
+	}
+}
+
+%btnLightBig {
+	border-radius: 40px;
+	white-space: nowrap;
+	outline: none;
+	border: none;
+	@extend %btn-padBig;
+	@extend %btn-fontBig;
+	@extend %btn-common;
+	@extend %btn-colLight;
+	@extend %btn-bg-accent-light;
+
+	&:hover {
+		cursor: pointer;
+		@extend %btn-bg-accent;
+	}
+}
+
+%btnDarkSmall {
+	border-radius: 40px;
+	white-space: nowrap;
+	outline: none;
+	border: none;
+
+	@extend %btn-padSmall;
+	@extend %btn-fontSmall;
+	@extend %btn-common;
+	@extend %btn-colDark;
+	@extend %btn-bg-accent;
+
+	&:hover {
+		cursor: pointer;
+		@extend %btn-bg-accent;
+	}
+}
+
+%btnLightSmall {
+	border-radius: 40px;
+	white-space: nowrap;
+	outline: none;
+	border: none;
+	@extend %btn-fontSmall;
+	@extend %btn-padSmall;
+	@extend %btn-common;
+	@extend %btn-colLight;
+	@extend %btn-bg-accent-light;
+
+	&:hover {
+		cursor: pointer;
+		@extend %btn-bg-accent;
+	}
+}
