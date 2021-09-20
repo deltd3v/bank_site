@@ -1,13 +1,4 @@
-import { Link } from 'solid-app-router';
-import {
-	Component,
-	createEffect,
-	createSignal,
-	createComputed,
-	Match,
-	createMemo,
-	onMount,
-} from 'solid-js';
+import { Component, createEffect, createSignal } from 'solid-js';
 
 import Logo from '../Logo';
 import s from './styles.module.scss';
@@ -23,13 +14,6 @@ const NavBar: Component = () => {
 	const showButton = () => {
 		setButton();
 		setMenuToggle();
-		//	setButton(true);
-		/*if (window.innerWidth >= 960) {
-			setMenuToggle(true);
-		} else {
-			setButton(true);
-			setMenuToggle(false);
-		}*/
 	};
 
 	createEffect(() => {
@@ -101,16 +85,6 @@ const NavBar: Component = () => {
 							<b onClick={closeMobileMenu}>About</b>
 						</a>
 					</li>
-					{/* <li class={s['NavItem']}>
-						<a tabIndex={5} href="#products" class={s['NavLink']}>
-							<b onClick={closeMobileMenu}>Products</b>
-						</a>
-					</li>
-					<li class={s['NavItem']}>
-						<a tabIndex={6} href="#services" class={s['NavLink']}>
-							<b onClick={closeMobileMenu}>Services</b>
-						</a>
-					</li> */}
 
 					<li class={s['NavItemBtn']}>
 						{button ? (

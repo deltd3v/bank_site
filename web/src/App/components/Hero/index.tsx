@@ -1,4 +1,5 @@
 import { Component, createSignal } from 'solid-js';
+
 import s from './styles.module.scss';
 import video from '../../../assets/videos/video.mp4';
 

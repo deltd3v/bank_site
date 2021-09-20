@@ -1,14 +1,7 @@
-import { Component, createEffect, createSignal } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
+
 import { promoT } from './data';
 import s from './styles.module.scss';
-
-// export type PromoProps = {
-// 	theme: string;
-// 	id: string;
-// 	promoTitle: string;
-// 	byLine: string;
-// 	subTitle: string;
-// };
 
 const PromoInfo: Component<promoT> = (props) => {
 	const [theme, setTheme] = createSignal(props.theme || 'light');

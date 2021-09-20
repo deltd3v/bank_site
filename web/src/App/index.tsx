@@ -1,14 +1,10 @@
 import { onMount } from 'solid-js';
+import feather from 'feather-icons';
 import type { Component } from 'solid-js';
-import { Routes, Route } from 'solid-app-router';
 
+import Index from './pages';
 import s from './styles.module.scss';
 import NavBar from './components/NavBar';
-
-import feather from 'feather-icons';
-import Index from './pages';
-
-import PromoInfo from './components/Promo';
 
 const App: Component = () => {
 	onMount(() => {

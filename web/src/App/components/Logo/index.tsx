@@ -1,5 +1,7 @@
 import { Component } from 'solid-js';
+
 import s from './styles.module.scss';
+
 export const Logo: Component<{
 	class?: string | any;
 	width?: number;

@@ -4,7 +4,7 @@ import PromoInfo from '../components/Promo';
 import promoData from '../components/Promo/data';
 
 const Index: Component = () => {
-	const [promos, setPromos] = createSignal(promoData);
+	const [promos, _setPromos] = createSignal(promoData);
 
 	return (
 		<div id="index" class="page" style="width:100%;">
