@@ -80,7 +80,7 @@ export const promoData: promoT[] = [
 		promoBtnLabel: 'Read More',
 
 		hasBtn: true,
-		btnTheme: 'light',
+		btnTheme: 'dark',
 		btnSize: 'small',
 	},
 	{
