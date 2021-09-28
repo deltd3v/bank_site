@@ -5,6 +5,7 @@ import type { Component } from 'solid-js';
 import Index from './pages';
 import s from './styles.module.scss';
 import NavBar from './components/NavBar';
+import FooterSection from './components/Footer';
 
 const App: Component = () => {
 	onMount(() => {
