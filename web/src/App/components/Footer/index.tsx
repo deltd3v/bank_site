@@ -7,11 +7,15 @@ const FooterSection: Component = () => {
 	return (
 		<div id="footer" class={s.container}>
 			<div class={s.subscription}>
-				<section class={s.subHeading}>
-					<pre class="margin: .6em 0em">
-						Wanna know what we're upto ?
-					</pre>
-					<h3>Great ! ⭐Subscribe to our weekly newsletter 📰</h3>
+                <section class={s.subHeading}>
+                    <pre class="margin: .6em 0em">
+
+                    Wanna know what we're upto ?
+                    </pre>
+                    <h3>
+
+                    Great ! ⭐Subscribe to our weekly newsletter 📰
+                    </h3>
 				</section>
 				<p class={s.subText}>You can cancel it any time</p>
 				<form action="#" class={s.form}>
@@ -30,7 +34,7 @@ const FooterSection: Component = () => {
 				<div class={s.linksWrapper}>
 					<div class={s.linkItems}>
 						<h2 class={s.linkTitle}>About</h2>
-						<a href="#sign-up" class={s.link}>
+						<a href="#" class={s.link}>
 							Info
 						</a>
 						<a href="#" class={s.link}>
@@ -68,7 +72,7 @@ const FooterSection: Component = () => {
 
 					<div class={s.linkItems}>
 						<h2 class={s.linkTitle}>Operations</h2>
-						<a href="#sign-up" class={s.link}>
+						<a href="#" class={s.link}>
 							Headquarters
 						</a>
 						<a href="#" class={s.link}>
@@ -85,11 +89,11 @@ const FooterSection: Component = () => {
 						</a>
 					</div>
 
-					<div class={s.linkItems}>
+					 <div class={s.linkItems}>
 						<h2 class={s.linkTitle}>Platforms</h2>
-						<a href="#sign-up" class={s.link}>
-							Code app
-						</a>
+						<a href="#" class={s.link}>
+                            Code app
+                        </a>
 						<a href="#" class={s.link}>
 							ATMs
 						</a>
@@ -102,7 +106,7 @@ const FooterSection: Component = () => {
 						<a href="#" class={s.link}>
 							Cards
 						</a>
-					</div>
+					</div>  
 				</div>
 				<div class={s.socialMediaSection}>
 					<section class={s.socialMediaWrap}>
@@ -121,8 +125,8 @@ const FooterSection: Component = () => {
 						</a>
 					</section>
 
-					<code class={s.copyRight} style="margin: 0 .5em">
-						© {new Date().getFullYear()}
+					<code class={s.copyRight}style="margin: 0 .5em">
+						 © {new Date().getFullYear()}
 					</code>
 
 					<div class={s.socialMediaIcons}>
