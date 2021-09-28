@@ -104,7 +104,8 @@ const FooterSection: Component = () => {
 				</section>
 
 				<div class={s.copyRight}>
-					© <pre>{new Date().getFullYear()}</pre>
+					<pre>All rights reserved</pre> ©{' '}
+					<pre>{new Date().getFullYear()}</pre>
 				</div>
 
 				<div class={s.socialMediaIcons}>
