@@ -39,7 +39,7 @@
 	grid-template-areas: 'img promo';
 
 	@media screen and (max-width: 768px) {
-		grid-template-areas: 'img promo';
+		grid-template-areas: 'img' 'promo';
 	}
 }
 
@@ -70,13 +70,13 @@
 }
 
 .byLine {
-	color: #01bf71;
+	color: var(--accent);
 	font-size: 16px;
 	line-height: 16px;
 	font-weight: 700;
+	margin-bottom: 16px;
 	letter-spacing: 1.4px;
 	text-transform: uppercase;
-	margin-bottom: 16px;
 }
 
 .title {

@@ -3,6 +3,9 @@ import { Component, createEffect, createSignal } from 'solid-js';
 import Logo from '../Logo';
 import s from './styles.module.scss';
 
+// ids
+// services
+//
 const NavBar: Component = () => {
 	const [menuToggle, setMenuToggle] = createSignal(false);
 	const [button, setButton] = createSignal(false);
@@ -83,6 +86,11 @@ const NavBar: Component = () => {
 					<li class={s['NavItem']}>
 						<a tabIndex={4} href="#about" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>About</b>
+						</a>
+					</li>
+					<li class={s['NavItem']}>
+						<a tabIndex={4} href="#services" class={s['NavLink']}>
+							<b onClick={closeMobileMenu}>Services</b>
 						</a>
 					</li>
 

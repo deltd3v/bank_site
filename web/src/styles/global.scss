@@ -82,8 +82,8 @@ code {
 /* Theme variables */
 :root {
 	--root-fs: em(16px);
-	--accent: rgb(18, 90, 73);
-	--accent-light: rgb(32, 154, 125);
+	--accent: #702ead;
+	--accent-light: rgb(157, 63, 245);
 
 	--font-md: 1em;
 	--font-big: 1.25em;
@@ -139,7 +139,7 @@ body {
 	width: 100%;
 	min-width: 100%;
 	position: relative;
-	height: calc(100vh * 5); // for 5pages
+	height: calc(100vh * 7); // for 7 pages
 }
 
 .scroll-down #nav {

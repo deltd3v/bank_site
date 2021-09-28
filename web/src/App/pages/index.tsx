@@ -1,4 +1,5 @@
 import { Component, createSignal, For } from 'solid-js';
+import BankServices from '../components/BankServices';
 import Hero from '../components/Hero';
 import PromoInfo from '../components/Promo';
 import promoData from '../components/Promo/data';
@@ -19,6 +20,10 @@ const Index: Component = () => {
 					);
 				}}
 			</For>
+			<BankServices></BankServices>
+			<div id="sign-up" style="width:100%;height: 100%;">
+				<h1>sign up</h1>
+			</div>
 		</div>
 	);
 };

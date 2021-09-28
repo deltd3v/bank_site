@@ -95,7 +95,7 @@ export const promoData: promoT[] = [
 		title: 'UNDERSTAND YOUR DATA',
 		subTitle: '',
 		promoDesc:
-			'We provide the tools to analyze spendings and keep track of upcoming/rejected payments 💹. You will also receive charts and graph overviews for your account spending and FREE 🆓 💯 courses on how to invest your savings 😎 ➕ consultancy',
+			'We provide the tools to analyze spendings and keep track of§ payments 💹. You will also receive charts and graph overviews for your account spending and FREE 🆓 💯 courses on how to invest your savings 😎 ➕ consultancy',
 		promoBtnLabel: 'Read More',
 
 		hasBtn: true,
