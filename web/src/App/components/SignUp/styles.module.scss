@@ -1,0 +1,68 @@
+@use '../../../styles/btn';
+
+.container {
+	width: 100%;
+	height: 100%;
+	padding: 5%;
+
+	background-color: var(--accent);
+}
+
+.container,
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form {
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		margin: 0.5em 0em;
+	}
+}
+
+.formLabel {
+	font-size: 4rem;
+	text-align: center;
+}
+
+.formLabel,
+.inputLabel {
+	color: white;
+}
+
+.input {
+	font-size: 1.5rem;
+	padding: 0.5em 1.5em;
+}
+
+.SignUpBtn {
+	@extend %btnDarkSmall;
+	background-color: white;
+	color: var(--accent);
+
+	margin: 2.5rem;
+
+	&:hover,
+	&:focus {
+		@extend %btnLightSmall;
+		background-color: var(--accent-light);
+		color: white;
+	}
+
+	&:active {
+		@extend %btnDarkSmall;
+		background-color: white;
+		color: var(--accent);
+	}
+}

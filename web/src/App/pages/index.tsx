@@ -4,6 +4,7 @@ import FooterSection from '../components/Footer';
 import Hero from '../components/Hero';
 import PromoInfo from '../components/Promo';
 import promoData from '../components/Promo/data';
+import { SignUpSection } from '../components/SignUp';
 
 const Index: Component = () => {
 	const [promos, _setPromos] = createSignal(promoData);
@@ -22,9 +23,7 @@ const Index: Component = () => {
 				}}
 			</For>
 			<BankServices></BankServices>
-			<div id="sign-up" style="width:100%;height: 100%;">
-				<h1>sign up</h1>
-			</div>
+			<SignUpSection></SignUpSection>
 			<FooterSection></FooterSection>
 		</div>
 	);
