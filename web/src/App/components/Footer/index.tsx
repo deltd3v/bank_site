@@ -137,7 +137,9 @@ const FooterSection: Component = () => {
 						<Logo strokeWidth={50} width={40} height={40} />
 						bank
 					</a>
-					<pre class={s.WebsiteRights}>ULTRA © 2020</pre>
+					<pre class={s.WebsiteRights}>
+						Star ⭐ Bank © {new Date().getFullYear()}
+					</pre>
 					<ul class={s.socialsIcons}>
 						<a
 							class={s.socialsIconLink}
