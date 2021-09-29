@@ -29,21 +29,25 @@ export const Hero: Component = () => {
 					class={s.heroCtaBtnLink}
 					href="#sign-up"
 					onMouseEnter={toggleCtaHover}
-					onMouseLeave={toggleCtaHover}>
+					onMouseLeave={toggleCtaHover}
+				>
 					<button
 						tabIndex={8}
 						class={`${s.heroCtaBtn} ${
 							heroCtaHover()
 								? `${s.iconChevRight}`
 								: `${s.iconRight}`
-						}`}>
+						}`}
+					>
 						<b>Join Us</b>
 						<i
 							class={`${s.heroCtaBtnIcon} ${s.heroCtaBtnIconA}`}
-							data-feather={'arrow-right'}></i>
+							data-feather={'arrow-right'}
+						></i>
 						<i
 							class={`${s.heroCtaBtnIcon} ${s.heroCtaBtnIconB}`}
-							data-feather={'chevrons-right'}></i>
+							data-feather={'chevrons-right'}
+						></i>
 					</button>
 				</a>
 			</section>

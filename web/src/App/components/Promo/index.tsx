@@ -11,12 +11,14 @@ const PromoInfo: Component<promoT> = (props) => {
 			id={props.id}
 			class={`${s.container} ${
 				theme() == 'light' ? s.themeLight : s.themeDark
-			}`}>
+			}`}
+		>
 			<div class={s.wrapper}>
 				<section
 					class={`${s.promoRow} ${
 						props.imgStart ? s.gtaImgStart : s.gtaImgEnd
-					}`}>
+					}`}
+				>
 					<div class={s.column1}>
 						<article class={s.textWrapper}>
 							{props.hasByLine && (
@@ -29,7 +31,8 @@ const PromoInfo: Component<promoT> = (props) => {
 									theme() == 'light'
 										? s.titleDark
 										: s.titleLight
-								}`}>
+								}`}
+							>
 								{props.title.toUpperCase() || 'TITLE'}
 							</h2>
 
@@ -39,7 +42,8 @@ const PromoInfo: Component<promoT> = (props) => {
 										theme() == 'light'
 											? s.subTitleDark
 											: s.subTitleLight
-									}`}>
+									}`}
+								>
 									{props.subTitle || 'SUB TITLE'}{' '}
 								</h6>
 							)}
@@ -50,7 +54,8 @@ const PromoInfo: Component<promoT> = (props) => {
 										theme() == 'light'
 											? s.promoDescDark
 											: s.promoDescLight
-									}`}>
+									}`}
+								>
 									{props.promoDesc}
 								</p>
 							)}
@@ -67,7 +72,8 @@ const PromoInfo: Component<promoT> = (props) => {
 											props.btnTheme == 'light'
 												? s['btn-light']
 												: s['btn-dark']
-										}`}>
+										}`}
+									>
 										{props.promoBtnLabel || 'CLICK'}
 									</button>
 								</a>

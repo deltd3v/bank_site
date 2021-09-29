@@ -1,12 +1,12 @@
 import { render } from 'solid-js/web';
 
-import NavBar from './App/components/NavBar';
-import App from './App';
-import './styles/global.scss';
+import { onMount } from 'solid-js';
+import feather from 'feather-icons';
 
-const root = document.createElement('div');
-root.setAttribute('id', 'root');
-document.body.appendChild(root);
+import Index from './App/pages';
+import NavBar from './App/components/NavBar';
+import './styles/global.scss';
+const root = document.getElementById('root');
 
 /* scroll up magic should reveal the sticky NavBar */
 let prevScroll = 0;
@@ -38,6 +38,17 @@ window.addEventListener('scroll', (e) => {
 
 	prevScroll = crntScroll;
 });
+
 console.clear();
 
-render(() => <App />, root);
+render(() => {
+	onMount(() => {
+		feather.replace();
+	});
+	return (
+		<div style="width: 100%;height:auto; color:black;">
+			<NavBar></NavBar>
+			<Index></Index>
+		</div>
+	);
+}, root);

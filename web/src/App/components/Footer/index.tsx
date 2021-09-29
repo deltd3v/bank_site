@@ -3,7 +3,7 @@ import Logo from '../Logo';
 
 import s from './styles.module.scss';
 
-const FooterLink: Component<{
+const footLink: Component<{
 	linkGroupTitle: string;
 	links: { link: string; label: string }[];
 }> = (props) => {
@@ -13,7 +13,8 @@ const FooterLink: Component<{
 
 			<For
 				each={props.links}
-				fallback={<div>Links are being loaded...</div>}>
+				fallback={<div>Links are being loaded...</div>}
+			>
 				{(l, _index) => (
 					<a href={l.link} class={s.link}>
 						{l.label}
@@ -26,64 +27,173 @@ const FooterLink: Component<{
 
 const FooterSection: Component = () => {
 	return (
-		<div id="footer" class={s.container}>
-			<div class={s.subscription}>
-				<section class={s.subHeading}>
-					<pre class="margin: .6em 0em">
-						Wanna know what we're upto ?
-					</pre>
-					<h3>Great ! ⭐Subscribe to our weekly newsletter 📰</h3>
-				</section>
-				<p class={s.subText}>You can cancel it any time</p>
+		<div class={s.container}>
+			<div class={s.subWrapper}>
+				<h2 class={s.subHeading}>
+					Join our club to get access to our latest articles and
+					offers 😎
+				</h2>
+				<p class={s.subText}>
+					{' '}
+					Feel free to unsubscribe from our mailing list at any time.
+				</p>
 				<form action="#" class={s.form}>
 					<input
-						type="email"
+						class={s.formInpt}
 						name="email"
-						id="email"
-						class={s.formInput}
-						placeholder="email@email.com"
+						type="email"
+						placeholder="jane_doe@email.com"
 					/>
-					<button class={s.Button}>Subscribe</button>
+					<button class={s.Button}>Join</button>
 				</form>
 			</div>
 
-			<div class={s.linksContainer}>
-				<div class={s.linksWrapper}>
-					<FooterLink
-						linkGroupTitle="Info"
-						links={[
-							{ label: 'Careers', link: '#' },
-							{ label: 'Stocks', link: '#' },
-							{ label: 'Investors', link: '#' },
-							{ label: 'Terms and Codes', link: '#' },
-						]}></FooterLink>
-
-					<FooterLink
-						linkGroupTitle="Contacts"
-						links={[
-							{ label: 'Mail', link: '#' },
-							{ label: 'Chat', link: '#' },
-							{ label: 'Phone', link: '#' },
-							{ label: 'Bird Carriers 🦅', link: '#' },
-						]}></FooterLink>
-
-					<FooterLink
+			{/* 
+			 
+			   	<footLink
 						linkGroupTitle="Headquarters"
 						links={[
 							{ label: 'Branches', link: '#' },
 							{ label: 'Managers', link: '#' },
 							{ label: 'Investors', link: '#' },
 							{ label: 'Customer Relations', link: '#' },
-						]}></FooterLink>
+						]}
+					></footLink>
 
-					<FooterLink
+*/}
+
+			<div class={s.linkContainer}>
+				<ul class={s.linkWrapper}>
+					<li class={s.linkItem}>
+						<h5 class={s.linkItemTitle}>About Us</h5>
+						<a class={s.footLink} href="/#sign-up">
+							Info
+						</a>
+						<a class={s.footLink} href="#">
+							Careers
+						</a>
+						<a class={s.footLink} href="#">
+							Stocks
+						</a>
+						<a class={s.footLink} href="#">
+							Investors
+						</a>
+					</li>
+					<li class={s.linkItem}>
+						<h5 class={s.linkItemTitle}>Contact Us</h5>
+						<a class={s.footLink} href="#">
+							Mail
+						</a>
+						<a class={s.footLink} href="#">
+							Chat
+						</a>
+						<a class={s.footLink} href="#">
+							Phone
+						</a>
+						<a class={s.footLink} href="#">
+							Bird Carrier 🦅
+						</a>
+					</li>
+				</ul>
+				<ul class={s.linkWrapper}>
+					<li class={s.linkItem}>
+						<h5 class={s.linkItemTitle}>HQ</h5>
+						<a class={s.footLink} href="#">
+							Corp
+						</a>
+						<a class={s.footLink} href="#">
+							Branches
+						</a>
+						<a class={s.footLink} href="#">
+							Management
+						</a>
+						<a class={s.footLink} href="#">
+							Visionaries
+						</a>
+					</li>
+
+					<li class={s.linkItem}>
+						<h5 class={s.linkItemTitle}>Socials</h5>
+						<a class={s.footLink} href="#">
+							Instagram
+						</a>
+						<a class={s.footLink} href="#">
+							Facebook
+						</a>
+						<a class={s.footLink} href="#">
+							Youtube
+						</a>
+						<a class={s.footLink} href="#">
+							Twitter
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class={s.socials}>
+				<div class={s.socialsWrap}>
+					<a class={s.socialsLogos} href="/">
+						star
+						<Logo strokeWidth={50} width={40} height={40} />
+						bank
+					</a>
+					<pre class={s.WebsiteRights}>ULTRA © 2020</pre>
+					<ul class={s.socialsIcons}>
+						<a
+							class={s.socialsIconLink}
+							href="/"
+							target="_blank"
+							aria-label="Facebook"
+						>
+							<i data-feather="facebook"></i>
+						</a>
+						<a
+							class={s.socialsIconLink}
+							href="/"
+							target="_blank"
+							aria-label="Instagram"
+						>
+							<i data-feather="instagram"></i>
+						</a>
+
+						<a
+							class={s.socialsIconLink}
+							href="/"
+							target="_blank"
+							aria-label="Twitter"
+						>
+							<i data-feather="twitter"></i>
+						</a>
+						<a
+							class={s.socialsIconLink}
+							href="/"
+							target="_blank"
+							aria-label="LinkedIn"
+						>
+							<i data-feather="linkedin"></i>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	);
+	/*return (
+		 
+		 
+
+				
+
+				
+
+					<footLink
 						linkGroupTitle="Platforms"
 						links={[
 							{ label: 'Mobile', link: '#' },
 							{ label: 'Web', link: '#' },
 							{ label: 'ATMs', link: '#' },
 							{ label: 'Code app', link: '#' },
-						]}></FooterLink>
+						]}
+					></footLink>
 				</div>
 			</div>
 			<div class={s.socialMediaSection}>
@@ -91,14 +201,16 @@ const FooterSection: Component = () => {
 					<a
 						href="#"
 						class={s.socialMediaLogo}
-						style="font-size: 1.2em; align-items:center; font-weight: bolder;">
+						style="font-size: 1.2em; align-items:center; font-weight: bolder;"
+					>
 						star
 						<Logo
 							class={s.socialMediaIcon}
 							width={50}
 							height={30}
 							strokeColor={'white'}
-							strokeWidth={80}></Logo>
+							strokeWidth={80}
+						></Logo>
 						bank
 					</a>
 				</section>
@@ -113,47 +225,55 @@ const FooterSection: Component = () => {
 						class={s.socialMediaIconLink}
 						href="#"
 						target="_blank"
-						aria-label="Facebook">
+						aria-label="Facebook"
+					>
 						<i
 							class={s.socialMediaIcon}
-							data-feather="facebook"></i>
+							data-feather="facebook"
+						></i>
 					</a>
 					<a
 						class={s.socialMediaIconLink}
 						href="#"
 						target="_blank"
-						aria-label="Instagram">
+						aria-label="Instagram"
+					>
 						<i
 							class={s.socialMediaIcon}
-							data-feather="instagram"></i>
+							data-feather="instagram"
+						></i>
 					</a>
 					<a
 						class={s.socialMediaIconLink}
 						href="#"
 						target="_blank"
-						aria-label="Youtube">
+						aria-label="Youtube"
+					>
 						<i class={s.socialMediaIcon} data-feather="youtube"></i>
 					</a>
 					<a
 						class={s.socialMediaIconLink}
 						href="#"
 						target="_blank"
-						aria-label="Twitter">
+						aria-label="Twitter"
+					>
 						<i class={s.socialMediaIcon} data-feather="twitter"></i>
 					</a>
 					<a
 						class={s.socialMediaIconLink}
 						href="#"
 						target="_blank"
-						aria-label="LinkedIN">
+						aria-label="LinkedIN"
+					>
 						<i
 							class={s.socialMediaIcon}
-							data-feather="linkedin"></i>
+							data-feather="linkedin"
+						></i>
 					</a>
 				</div>
 			</div>
 		</div>
-	);
+	);*/
 };
 
 export default FooterSection;

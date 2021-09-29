@@ -43,14 +43,16 @@ const NavBar: Component = () => {
 					tabIndex={1}
 					href="#index"
 					class={s['NavLogoLink']}
-					onClick={closeMobileMenu}>
+					onClick={closeMobileMenu}
+				>
 					star
 					<Logo
 						width={20}
 						height={20}
 						strokeColor={'white'}
 						class={'NavLogoIcon'}
-						strokeWidth={75}></Logo>
+						strokeWidth={75}
+					></Logo>
 					bank
 				</a>
 
@@ -59,23 +61,27 @@ const NavBar: Component = () => {
 					class={`${s['MobileIcon']} ${
 						s[!menuToggle() ? 'close' : 'open']
 					}`}
-					onClick={handleMenuToggle}>
+					onClick={handleMenuToggle}
+				>
 					<i
 						class={s['menu-open']}
 						style={`color: white;stroke-width:.12em`}
-						data-feather="menu"></i>
+						data-feather="menu"
+					></i>
 
 					<i
 						class={s['menu-close']}
 						style={`color: white;stroke-width:.12em`}
-						data-feather="x"></i>
+						data-feather="x"
+					></i>
 				</div>
 
 				<ul
 					onClick={handleMenuToggle}
 					id="NavMenu"
 					class={`${s['NavMenu']} 
-						${s[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}>
+						${s[`${!menuToggle() ? 'NavMenu-open' : 'NavMenu-close'}`]}`}
+				>
 					<li class={s['NavItem']}>
 						<a tabIndex={3} href="#index" class={s['NavLink']}>
 							<b onClick={closeMobileMenu}>Home</b>
@@ -97,7 +103,8 @@ const NavBar: Component = () => {
 							<a href="#sign-up" class={`${s['NavBtnLink']}`}>
 								<button
 									tabIndex={7}
-									class={`${s['Button']} ${s['padBig']} ${s['bgPrimary']}`}>
+									class={`${s['Button']} ${s['padBig']} ${s['bgPrimary']}`}
+								>
 									<b>Sign Up</b>
 									<i data-feather="user-plus"></i>
 								</button>
@@ -107,7 +114,8 @@ const NavBar: Component = () => {
 								<button
 									tabIndex={8}
 									class={`${s['Button']} ${s['bgPrimary']}  ${s['padBig']} ${s['fontBig']}`}
-									onClick={closeMobileMenu}>
+									onClick={closeMobileMenu}
+								>
 									<b>Sign Up</b>
 								</button>
 							</a>

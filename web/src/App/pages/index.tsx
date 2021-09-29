@@ -10,7 +10,7 @@ const Index: Component = () => {
 	const [promos, _setPromos] = createSignal(promoData);
 
 	return (
-		<div id="index" class="page" style="width:100%;">
+		<div id="index">
 			<Hero></Hero>
 
 			<For each={promos()}>
