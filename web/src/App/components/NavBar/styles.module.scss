@@ -16,8 +16,6 @@
 	top: 0;
 	left: 0;
 	z-index: 1000;
-
-	// @media screen and (max-width: 960px) {	}
 }
 
 .NavbarContainer {
@@ -174,7 +172,6 @@
 		b,
 		svg {
 			margin: 0 0.4em;
-			//color: white;
 			stroke-width: 2;
 		}
 	}
@@ -192,10 +189,6 @@
 
 	&:focus {
 		@extend %btnDarkSmall;
-	}
-
-	@media screen and (max-width: 960px) {
-		// width: 60%;
 	}
 }
 

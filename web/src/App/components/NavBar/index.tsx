@@ -1,11 +1,9 @@
 import { Component, createEffect, createSignal } from 'solid-js';
 
 import Logo from '../Logo';
+
 import s from './styles.module.scss';
 
-// ids
-// services
-//
 const NavBar: Component = () => {
 	const [menuToggle, setMenuToggle] = createSignal(false);
 	const [button, setButton] = createSignal(false);
